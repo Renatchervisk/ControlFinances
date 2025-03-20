@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Controle Financeiro</h1>
+
+    <section id="resumo">
+        <div class="resumo-box">
+            <div class="resumo-item">Total a Pagar: <span id="totalPagar">R$ 0,00</span></div>
+            <div class="resumo-item">Total a Receber: <span id="totalReceber">R$ 0,00</span></div>
+            <div class="resumo-item">Total Vencidas: <span id="totalVencidas">R$ 0,00</span></div>
+        </div>
+    </section>
+
+    <section id="cadastroConta">
+        <h2>Registrar Conta</h2>
+        <input type="text" id="empresa" placeholder="Empresa">
+        <input type="text" id="cnpj" placeholder="CNPJ">
+        <input type="text" id="produto" placeholder="Produto">
+        <select id="tipo">
+            <option value="pagar">Conta a Pagar</option>
+            <option value="receber">Conta a Receber</option>
+        </select>
+        <input type="number" id="valor" placeholder="Valor">
+        <input type="date" id="dataEntrada">
+        <input type="date" id="dataVencimento">
+        <button onclick="adicionarConta()">Adicionar</button>
+    </section>
+
+    <section id="listaContas">
+        <h2>Lista de Contas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>CNPJ</th>
+                    <th>Produto</th>
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                    <th>Data Entrada</th>
+                    <th>Data Vencimento</th>
+                    <th>Data Pagamento</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaContas"></tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
